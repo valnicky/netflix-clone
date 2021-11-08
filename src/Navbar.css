@@ -1,0 +1,12 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between; }
+  .navbar .navbar__logo {
+    width: 80px;
+    object-fit: contain; }
+  .navbar .navbar__avatar {
+    width: 30px;
+    object-fit: contain; }
