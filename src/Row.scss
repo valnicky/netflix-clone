@@ -29,12 +29,13 @@
     }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 500px) {
     .row {
         margin: 0 auto;
         .row__poster {
-            max-width: 80%;
+            // max-width: 80%;
             margin: 0 auto;
+            height: 300px;
         }
     }
 }
