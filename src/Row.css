@@ -21,3 +21,10 @@
         transform: scale(1.09); }
   .row .row__posters::-webkit-scrollbar {
     display: none; }
+
+@media only screen and (max-width: 600px) {
+  .row {
+    margin: 0 auto; }
+    .row .row__poster {
+      max-width: 80%;
+      margin: 0 auto; } }

@@ -24,13 +24,13 @@ function Row({ title,  fetchUrl, isLargeRow }) {
         height: "390",
         width: "100%",
         playerVars: {
-            autplay: 1
+            autoplay: 1,
         }
     }
     
     const handleClick = (movie) => {
         if (trailerUrl) {
-            setTrailerUrl('');
+            setTrailerUrl(' ');
         } else {
             movieTrailer(movie?.name || "")
             .then((url) => {
@@ -43,11 +43,12 @@ function Row({ title,  fetchUrl, isLargeRow }) {
     
     //  console.log(movies);
     return ( <div className = "row" >
-        <h2 > { title } </h2> <div className = "row__posters" > {
-            movies.map((movie) => ( <img key = { movie.id }
+        <h2 > { title } </h2> <div className = "row__posters" > 
+        {movies.map((movie) => ( 
+            <img key = {movie.id}
                 onClick={() => handleClick(movie)}
                 className = { `row__poster  ${isLargeRow && 'row__posterLarge'}` }
-                src = { `${base_url}${isLargeRow ? movie.poster_path : movie.backdrop_path}` }
+                src = {`${base_url}${isLargeRow ? movie.poster_path : movie.backdrop_path}`}
                 alt = { movie.name }
                 />
             ))
